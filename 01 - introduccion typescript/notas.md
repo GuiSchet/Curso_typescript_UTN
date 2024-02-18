@@ -11,5 +11,6 @@ tsc -init
 
 siempre vas a tenr un archivo de javascript 
 tsc app.ts
-con este comando se compila en javascript
+con este comando creas un entorno de compilacion en tiempo real
 tsc app.ts -w
+
