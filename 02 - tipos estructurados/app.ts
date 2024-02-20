@@ -67,3 +67,71 @@ let pepe: user = {
     coloresFavoritos: ['rojo', 'rosado']
 }
 
+// el tipado se puede utilizar para objetos, arrays, numeros etc.
+
+type ID = number;
+type nombre = string;
+
+let userID: ID = 1;
+let userName: nombre = 'maria';
+
+//combinar tipos existentes
+//TYPE 1
+type Coordenada = {
+    a: number;
+    b: number;
+}
+
+//Type 2
+type CoordenadaDos = Coordenada & {c: number, d: number};
+
+//creamos el objeto literal finalmente
+
+let objetoFinal: CoordenadaDos = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+}
+
+//Refactorizar tipos complejos
+
+type usuarioBase = {
+    nombre: string,
+    apellido: string
+};
+
+type usuarioCompleto = usuarioBase & {
+    edad: number,
+    email: string
+};
+
+let usuarioFinal: usuarioCompleto = {
+    nombre: 'pepe',
+    apellido: 'joselu',
+    edad: 36,
+    email: 'juan@gmail'
+};
+
+//Representar el estado de un pedido en linea.
+
+//ejemplo sin refactorizar
+
+const estado_pendiente = 'pendiente';
+const estado_en_proceso = 'en proceso';
+const estado_enviado = 'enviado';
+const estado_entregado = 'entregado';
+
+let estadoPedido: string = estado_pendiente;
+
+//simular el cambio de estado.
+
+estadoPedido = estado_enviado;
+
+//beneficio de type en refactorizacion
+
+type EstadoPedido = 'pendiente' | 'en_proceso' | 'enviado' | 'entregado';
+
+let estadoDelPedido: EstadoPedido = 'pendiente';
+
+estadoDelPedido = 'enviado';

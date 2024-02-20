@@ -42,3 +42,29 @@ var pepe = {
     edad: 11,
     coloresFavoritos: ['rojo', 'rosado']
 };
+var userID = 1;
+var userName = 'maria';
+//creamos el objeto literal finalmente
+var objetoFinal = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
+};
+var usuarioFinal = {
+    nombre: 'pepe',
+    apellido: 'joselu',
+    edad: 36,
+    email: 'juan@gmail'
+};
+//Representar el estado de un pedido en linea.
+//ejemplo sin refactorizar
+var estado_pendiente = 'pendiente';
+var estado_en_proceso = 'en proceso';
+var estado_enviado = 'enviado';
+var estado_entregado = 'entregado';
+var estadoPedido = estado_pendiente;
+//simular el cambio de estado.
+estadoPedido = estado_enviado;
+var estadoDelPedido = 'pendiente';
+estadoDelPedido = 'enviado';
