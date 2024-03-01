@@ -43,3 +43,4 @@ function agregarEmppleado() {
 };
 
 
+// pegar resto del proyecto del archivo de la clase...
